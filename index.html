@@ -36,31 +36,93 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:850px){nav{display:none;position:absolute;top:77px;left:0;right:0;background:var(--paper);padding:22px 7vw;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu{display:block}.hero,.manifesto,.sketch-layout,.spec-grid,.final-grid,.materials{grid-template-columns:1fr}.hero{padding-top:60px}.hero-visual{max-width:650px}.hero .photo-frame img{height:400px}.section{padding:75px 7vw}.section-head{display:block}.section-intro{margin-top:20px}.cards{grid-template-columns:1fr}.card{min-height:230px}.features{grid-template-columns:1fr 1fr}.manifesto{gap:25px}.final-photo img{height:350px}}
 @media(max-width:500px){header{padding:0 5vw}.hero{padding:50px 6vw}.hero-meta{gap:13px;flex-wrap:wrap}.hero .photo-frame img{height:330px}.section{padding:65px 6vw}.features{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}.spec-row{font-size:11px}.drawing{padding:14px}footer{padding:22px 6vw;flex-direction:column}}
+
+/* Personal identity, client brief, process timeline and prototype gallery */
+.identity-strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.identity-chip{border:1px solid var(--line);background:#fffdf9;padding:10px 14px;font:10px "DM Mono";letter-spacing:.08em;color:var(--muted)}
+.identity-chip b{color:var(--wine);font-weight:500}
+.brief{background:#171416;color:var(--paper);padding:88px 8vw}
+.brief .section-index{color:#d4b36a}
+.brief .section-intro{color:#bdb3ad}
+.brief-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:38px}
+.brief-card{border:1px solid #514648;padding:24px 20px;min-height:190px;background:linear-gradient(145deg,#282124,#1b181a)}
+.brief-card .brief-no{font:11px "DM Mono";color:#d4b36a;letter-spacing:.12em}
+.brief-card h3{font:500 23px "Playfair Display";margin:20px 0 9px;color:#f4e9df}
+.brief-card p{font-size:12px;line-height:1.7;color:#bcb1aa;margin:0}
+.brief-note{margin-top:22px;color:#a99e97;font:10px "DM Mono";letter-spacing:.07em}
+.making{background:#e9e1d8}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d4c6ba;border:1px solid #d4c6ba;margin-top:40px}
+.process-step{background:#f7f3ee;padding:25px 22px;min-height:205px;position:relative}
+.process-step .step-no{font:11px "DM Mono";color:var(--wine);letter-spacing:.12em}
+.process-step h3{font-size:16px;margin:22px 0 9px}
+.process-step p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.process-step:after{content:"";position:absolute;top:29px;right:20px;width:22px;height:1px;background:var(--gold)}
+.process-note{font-size:11px;color:var(--muted);line-height:1.7;margin-top:18px}
+.gallery{background:#211d20;color:var(--paper)}
+.gallery .section-intro{color:#b8aea8}
+.gallery-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+.gallery-main,.gallery-side figure{margin:0;background:#171416;border:1px solid #514648;padding:9px}
+.gallery-main img{width:100%;height:490px;object-fit:cover;display:block}
+.gallery-side{display:grid;grid-template-rows:1fr 1fr;gap:16px}
+.gallery-side img{width:100%;height:225px;object-fit:cover;display:block}
+.gallery figcaption{padding:11px 5px 4px;font:10px "DM Mono";letter-spacing:.08em;color:#c4b7ad}
+.gallery-main figcaption span,.gallery-side figcaption span{color:#d4b36a}
+.final-credit{font:10px "DM Mono";letter-spacing:.12em;color:var(--muted);margin-top:24px}
+@media(max-width:850px){
+ .brief-grid,.process-grid{grid-template-columns:1fr 1fr}
+ .gallery-grid{grid-template-columns:1fr}
+ .gallery-main img{height:390px}
+ .gallery-side{grid-template-columns:1fr 1fr;grid-template-rows:none}
+ .gallery-side img{height:220px}
+}
+@media(max-width:500px){
+ .brief,.making,.gallery{padding-left:6vw;padding-right:6vw}
+ .brief-grid,.process-grid{grid-template-columns:1fr}
+ .gallery-side{grid-template-columns:1fr}
+ .gallery-main img{height:300px}
+ .gallery-side img{height:260px}
+}
+
 </style>
 </head>
 <body>
 <header>
-  <a class="brand" href="#top"><span class="brand-mark">R</span><span><strong>RESONANCE</strong><small>OBJECTS FOR THOUGHT</small></span></a>
+  <a class="brand" href="#top"><span class="brand-mark">KY</span><span><strong>KAYA YANG</strong><small>INDUSTRIAL DESIGN · 2026</small></span></a>
   <button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
   <nav>
-    <a href="#story">Concept</a><a href="#inspiration">Inspiration</a><a href="#process">Design process</a><a href="#details">Details</a><a href="#final">Final design</a><a class="nav-cta" href="#contact">The idea ↗</a>
+    <a href="#story">Concept</a><a href="#brief">Client brief</a><a href="#inspiration">Inspiration</a><a href="#process">Form study</a><a href="#making">Making</a><a href="#gallery">Gallery</a><a href="#final">Final design</a>
   </nav>
 </header>
 <main id="top">
 <section class="hero">
  <div class="hero-copy reveal">
-  <div class="eyebrow">Industrial design · Writing instrument 01</div>
+  <div class="eyebrow">Kaya Yang · Industrial Design · 2026</div>
   <h1>Ideas in<br><em>motion.</em></h1>
   <p class="hero-lede">A writing instrument shaped for two ways of thinking — the musician who follows a melody, and the mathematician who follows a pattern.</p>
   <div class="hero-actions"><a class="btn primary" href="#final">Explore the pen <span>↗</span></a><a class="btn secondary" href="#process">See the process <span>↓</span></a></div>
   <div class="hero-meta"><span><b>01</b> FORM & FEEL</span><span><b>02</b> MUSIC & MATHEMATICS</span><span><b>03</b> EVERYDAY OBJECT</span></div>
  </div>
- <div class="hero-visual reveal"><div class="photo-frame"><img src="assets/pen-prototype.jpg" alt="Handcrafted pen prototype with deep burgundy and warm wood-toned sections"><div class="photo-caption"><span>FIG 01 — PHYSICAL PROTOTYPE</span><span>FORM STUDY / 2026</span></div></div></div>
+ <div class="hero-visual reveal"><div class="photo-frame"><img src="assets/pen-prototype.jpg" alt="Handcrafted pen prototype with deep burgundy and warm wood-toned sections"><div class="photo-caption"><span>FIG 01 — HANDMADE PEN PROTOTYPE</span><span>KAYA YANG / 2026</span></div></div></div>
 </section>
 <section class="manifesto" id="story">
  <div class="reveal"><div class="eyebrow">The design statement</div><h2>One instrument.<br><em>Two languages.</em></h2></div>
  <div class="reveal"><p>Music and mathematics may seem like different worlds, but both begin with a simple mark and grow into something larger. A note becomes a melody. A symbol becomes an equation. This pen celebrates that shared moment of making.</p><div class="quote">“For the thought that arrives as a rhythm, a shape, or a line waiting to be written.”</div></div>
 </section>
+
+<section class="brief" id="brief">
+ <div class="section-head reveal">
+  <div><div class="section-index">DESIGN BRIEF / CLIENT REQUEST</div><h2>Four requests.<br>One clear direction.</h2></div>
+  <p class="section-intro">The brief sets the visual and functional goals for a writing instrument intended for musicians and mathematicians. Each request becomes a design filter for the final object.</p>
+ </div>
+ <div class="brief-grid">
+  <article class="brief-card reveal"><div class="brief-no">01 / AESTHETIC</div><h3>Elegant</h3><p>A refined silhouette with balanced proportions and carefully considered transitions between each section.</p></article>
+  <article class="brief-card reveal"><div class="brief-no">02 / COLOR</div><h3>Dark color</h3><p>A deep, understated palette. Burgundy, dark wood tones, and restrained metallic accents create visual depth.</p></article>
+  <article class="brief-card reveal"><div class="brief-no">03 / IDENTITY</div><h3>Music element</h3><p>A subtle musical reference gives the pen a personal identity without making it feel overly decorative.</p></article>
+  <article class="brief-card reveal"><div class="brief-no">04 / FUNCTION</div><h3>Practical</h3><p>The pen must remain comfortable to hold, easy to carry, and suitable for regular writing.</p></article>
+ </div>
+ <div class="brief-note">DESIGN USERS — MUSICIANS & MATHEMATICIANS</div>
+</section>
+
 <section class="section inspiration" id="inspiration">
  <div class="section-head reveal"><div><div class="section-index">01 / RESEARCH & INSPIRATION</div><h2>Where form<br>finds meaning.</h2></div><p class="section-intro">The design draws from the expressive character of musical instruments, the clarity of mathematical notation, and the warmth of handcrafted objects.</p></div>
  <div class="cards">
@@ -77,6 +139,25 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
   <div class="sketch-board reveal"><svg viewBox="0 0 700 330" role="img" aria-label="Concept drawing of the segmented pen"><defs><pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#d8d0c9" stroke-width=".7"/></pattern></defs><rect width="700" height="330" fill="url(#grid)"/><g transform="translate(55 135)"><path d="M0 28 L44 8 L44 48Z" fill="#d7c2ad" stroke="#57272f" stroke-width="2"/><rect x="44" y="8" width="115" height="40" rx="13" fill="#b78b69" stroke="#57272f" stroke-width="2"/><path d="M159 8 Q175 8 183 0 L278 0 Q295 0 295 8 L295 48 Q295 56 278 56 L183 56 Q175 48 159 48Z" fill="#57272f" stroke="#3f2027" stroke-width="2"/><rect x="295" y="4" width="16" height="48" rx="3" fill="#bd8b16"/><path d="M311 8 Q323 8 331 0 L425 0 Q442 0 442 8 L442 48 Q442 56 425 56 L331 56 Q323 48 311 48Z" fill="#754a43" stroke="#3f2027" stroke-width="2"/><rect x="442" y="8" width="135" height="40" rx="12" fill="#c8a88d" stroke="#57272f" stroke-width="2"/><path d="M577 8 L590 8 L590 48 L577 48" fill="none" stroke="#bd8b16" stroke-width="3"/><path d="M44 72H577" stroke="#1d5673" stroke-dasharray="4 4"/><path d="M44 65V79M577 65V79" stroke="#1d5673"/></g><g fill="#57272f" font-family="DM Mono" font-size="11"><text x="70" y="250">TIP</text><text x="245" y="250">SCULPTED GRIP</text><text x="490" y="250">BARREL / CAP</text></g><g stroke="#bd8b16" fill="none"><path d="M85 220L85 190M270 220L270 193M530 220L530 190"/></g><text x="350" y="300" text-anchor="middle" fill="#82776f" font-family="DM Mono" font-size="10" letter-spacing="2">EARLY FORM STUDY · NOT TO SCALE</text></svg></div>
  </div>
 </section>
+
+<section class="section making" id="making">
+ <div class="section-head reveal">
+  <div><div class="section-index">03 / MAKING PROCESS</div><h2>Made by hand,<br>step by step.</h2></div>
+  <p class="section-intro">The physical prototype takes shape through a sequence of material selection, wood preparation, shaping, finishing, personalization, and assembly.</p>
+ </div>
+ <div class="process-grid">
+  <article class="process-step reveal"><div class="step-no">STEP 01</div><h3>Select the wood</h3><p>Choose the wood for its grain, tone, and suitability for a small writing instrument.</p></article>
+  <article class="process-step reveal"><div class="step-no">STEP 02</div><h3>Cut the wood</h3><p>Cut the selected wood into workable sections for the different parts of the pen body.</p></article>
+  <article class="process-step reveal"><div class="step-no">STEP 03</div><h3>Drill the center</h3><p>Drill the central passage through the prepared wood sections to accommodate the pen’s internal components.</p></article>
+  <article class="process-step reveal"><div class="step-no">STEP 04</div><h3>Shape the body</h3><p>Carve and shave the wood down toward the intended pen profile, refining the segmented silhouette and transitions.</p></article>
+  <article class="process-step reveal"><div class="step-no">STEP 05</div><h3>Sand and refine</h3><p>Refine the contours and surface so the separate sections feel smoother and more consistent in the hand.</p></article>
+  <article class="process-step reveal"><div class="step-no">STEP 06</div><h3>Apply the wax</h3><p>Wax the wooden surfaces to bring out the grain and give the finished body a warmer, more complete appearance.</p></article>
+  <article class="process-step reveal"><div class="step-no">STEP 07</div><h3>Engrave the clip</h3><p>Engrave “Dr. Bleckner” onto the pen clip as a personal detail.</p></article>
+  <article class="process-step reveal"><div class="step-no">STEP 08</div><h3>Assemble the pen</h3><p>Bring the shaped wooden sections, clip, and writing components together to complete the physical prototype.</p></article>
+ </div>
+ <p class="process-note">The sequence above follows the making steps provided for this project. Individual workshop tools and exact measurements are not specified here.</p>
+</section>
+
 <section class="section specs" id="details">
  <div class="section-head reveal"><div><div class="section-index">03 / DESIGN DETAILS</div><h2>Considered<br>down to the detail.</h2></div><p class="section-intro">A closer look at the product language: a tactile body, deliberate proportions, and a visual identity that feels equally at home beside sheet music or a notebook of equations.</p></div>
  <div class="spec-grid">
@@ -89,11 +170,26 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
  <div class="section-head reveal"><div><div class="section-index">03B / DETAIL EXPLORATION</div><h2>Music, built<br>into the details.</h2></div><p class="section-intro">A parallel design exploration studies how a musical symbol can become a functional clip, while a twist mechanism keeps the writing experience clean and compact. This reference informs the design direction rather than claiming these parts are already built into the photographed prototype.</p></div>
  <div class="reveal" style="background:#171416;padding:10px;border:1px solid #4c4140"><img src="assets/music-pen-reference.png" alt="Music-inspired pen design exploration showing a treble-clef clip, twist mechanism, grip, and exploded component study" style="width:100%;display:block"></div>
 </section>
+
+<section class="section gallery" id="gallery">
+ <div class="section-head reveal">
+  <div><div class="section-index">04 / PROTOTYPE GALLERY</div><h2>The pen,<br>from every angle.</h2></div>
+  <p class="section-intro">A closer look at the handmade prototype: the clip and cap, the central burgundy sections, the wood grain, and the writing tip.</p>
+ </div>
+ <div class="gallery-grid">
+  <figure class="gallery-main reveal"><img src="assets/pen-views-collage.jpg" alt="Three views of the handmade pen showing the cap and clip, full length, and writing tip"><figcaption><span>FIG 01</span> — THREE-VIEW STUDY / CAP, BODY & TIP</figcaption></figure>
+  <div class="gallery-side">
+   <figure class="reveal"><img src="assets/pen-full-view.jpg" alt="Full-length view of the burgundy and natural wood pen on a wooden surface"><figcaption><span>FIG 02</span> — FULL-LENGTH VIEW</figcaption></figure>
+   <figure class="reveal"><img src="assets/pen-prototype.jpg" alt="Original photograph of the handcrafted pen prototype"><figcaption><span>FIG 03</span> — ORIGINAL PROTOTYPE PHOTO</figcaption></figure>
+  </div>
+ </div>
+</section>
+
 <section class="section showcase" id="final">
  <div class="section-head reveal"><div><div class="section-index">04 / FINAL CONCEPT</div><h2>A tool for<br>curious minds.</h2></div><p class="section-intro">A personal object for people who move between creative expression and analytical thought.</p></div>
  <div class="final-grid">
   <div class="final-photo reveal"><img src="assets/pen-prototype.jpg" alt="Close view of the burgundy and natural wood pen prototype"></div>
-  <div class="final-copy reveal"><div class="eyebrow">The Resonance pen</div><p>The physical prototype explores an expressive, segmented silhouette with deep burgundy tones, warm natural material, and a small metallic transition. Rather than looking like a conventional technical instrument, it aims to feel like an object with personality — one that belongs beside a piano, a sketchbook, or a page of proofs.</p><p>The design is still a form study. The final refill, clip mechanism, and exact dimensions can be developed alongside user testing to make sure that the character of the object is matched by reliable everyday performance.</p><div class="pillars"><div class="pillar"><b>Expressive</b><small>A distinct visual rhythm inspired by music.</small></div><div class="pillar"><b>Structured</b><small>Balanced proportions informed by geometry.</small></div><div class="pillar"><b>Tactile</b><small>Material contrast that rewards touch.</small></div><div class="pillar"><b>Personal</b><small>A writing companion for ideas of every kind.</small></div></div></div>
+  <div class="final-copy reveal"><div class="eyebrow">Kaya Yang · The Resonance Pen</div><p>The physical prototype explores an expressive, segmented silhouette with deep burgundy tones, warm natural material, and a small metallic transition. Rather than looking like a conventional technical instrument, it aims to feel like an object with personality — one that belongs beside a piano, a sketchbook, or a page of proofs.</p><p>The design is still a form study. The final refill, clip mechanism, and exact dimensions can be developed alongside user testing to make sure that the character of the object is matched by reliable everyday performance.</p><div class="pillars"><div class="pillar"><b>Expressive</b><small>A distinct visual rhythm inspired by music.</small></div><div class="pillar"><b>Structured</b><small>Balanced proportions informed by geometry.</small></div><div class="pillar"><b>Tactile</b><small>Material contrast that rewards touch.</small></div><div class="pillar"><b>Personal</b><small>A writing companion for ideas of every kind.</small></div></div></div>
  </div>
 </section>
 <section class="section">
