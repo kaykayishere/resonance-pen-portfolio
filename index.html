@@ -83,14 +83,20 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
  .gallery-side img{height:260px}
 }
 
-</style>
+
+.inspiration-board{background:#e9e1d8}
+.inspiration-board-frame{margin:0;background:#fffdf9;border:1px solid var(--line);padding:10px;box-shadow:14px 18px 0 rgba(87,39,47,.08)}
+.inspiration-board-frame img{width:100%;height:auto;display:block}
+.inspiration-board-frame figcaption{padding:13px 5px 3px;font:10px "DM Mono";letter-spacing:.1em;color:var(--muted)}
+.inspiration-board-frame figcaption span{color:var(--wine)}
+\n</style>
 </head>
 <body>
 <header>
   <a class="brand" href="#top"><span class="brand-mark">KY</span><span><strong>KAYA YANG</strong><small>INDUSTRIAL DESIGN · 2026</small></span></a>
   <button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
   <nav>
-    <a href="#story">Concept</a><a href="#brief">Client brief</a><a href="#inspiration">Inspiration</a><a href="#process">Form study</a><a href="#making">Making</a><a href="#gallery">Gallery</a><a href="#final">Final design</a>
+    <a href="#story">Concept</a><a href="#brief">Client brief</a><a href="#inspiration">Inspiration</a><a href="#making">Making</a><a href="#gallery">Gallery</a><a href="#moodboard">Mood board</a>
   </nav>
 </header>
 <main id="top">
@@ -99,7 +105,7 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
   <div class="eyebrow">Kaya Yang · Industrial Design · 2026</div>
   <h1>Ideas in<br><em>motion.</em></h1>
   <p class="hero-lede">A writing instrument shaped for two ways of thinking — the musician who follows a melody, and the mathematician who follows a pattern.</p>
-  <div class="hero-actions"><a class="btn primary" href="#final">Explore the pen <span>↗</span></a><a class="btn secondary" href="#process">See the process <span>↓</span></a></div>
+  <div class="hero-actions"><a class="btn primary" href="#gallery">Explore the pen <span>↗</span></a><a class="btn secondary" href="#making">See the process <span>↓</span></a></div>
   <div class="hero-meta"><span><b>01</b> FORM & FEEL</span><span><b>02</b> MUSIC & MATHEMATICS</span><span><b>03</b> EVERYDAY OBJECT</span></div>
  </div>
  <div class="hero-visual reveal"><div class="photo-frame"><img src="assets/pen-prototype.jpg" alt="Handcrafted pen prototype with deep burgundy and warm wood-toned sections"><div class="photo-caption"><span>FIG 01 — HANDMADE PEN PROTOTYPE</span><span>KAYA YANG / 2026</span></div></div></div>
@@ -131,15 +137,6 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
   <article class="card reveal"><div class="card-art"><svg viewBox="0 0 260 110" width="90%"><rect x="38" y="25" width="184" height="60" rx="30" fill="#d8c0a6"/><rect x="93" y="25" width="74" height="60" rx="20" fill="#57272f"/><path d="M38 55H222" stroke="#bd8b16" stroke-width="2" stroke-dasharray="4 5"/><circle cx="38" cy="55" r="4" fill="#1d5673"/><circle cx="222" cy="55" r="4" fill="#1d5673"/></svg></div><h3>Material honesty</h3><p>Warm wood tones, deep wine-purple surfaces, and small metallic accents let the materials become part of the experience.</p><div class="tagline">TACTILITY · WARMTH · CRAFT</div></article>
  </div>
 </section>
-<section class="section" id="process">
- <div class="sketch-layout">
-  <div class="reveal"><div class="section-index">02 / FORM DEVELOPMENT</div><h2>From a line<br>to an object.</h2><p class="section-intro" style="margin-top:20px">The silhouette keeps the familiar proportions of a pen while introducing a more sculptural, segmented body. Each transition gives the hand a visual and tactile point of reference.</p>
-   <div class="idea-list"><div class="idea"><span class="idea-num">A</span><div><strong>Segmented body</strong><small>Alternating forms create a distinctive visual rhythm.</small></div></div><div class="idea"><span class="idea-num">B</span><div><strong>Comfort-led grip</strong><small>A shaped central section offers a natural place for the fingers.</small></div></div><div class="idea"><span class="idea-num">C</span><div><strong>Balanced details</strong><small>Metallic accents connect the different materials into one object.</small></div></div></div>
-  </div>
-  <div class="sketch-board reveal"><svg viewBox="0 0 700 330" role="img" aria-label="Concept drawing of the segmented pen"><defs><pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#d8d0c9" stroke-width=".7"/></pattern></defs><rect width="700" height="330" fill="url(#grid)"/><g transform="translate(55 135)"><path d="M0 28 L44 8 L44 48Z" fill="#d7c2ad" stroke="#57272f" stroke-width="2"/><rect x="44" y="8" width="115" height="40" rx="13" fill="#b78b69" stroke="#57272f" stroke-width="2"/><path d="M159 8 Q175 8 183 0 L278 0 Q295 0 295 8 L295 48 Q295 56 278 56 L183 56 Q175 48 159 48Z" fill="#57272f" stroke="#3f2027" stroke-width="2"/><rect x="295" y="4" width="16" height="48" rx="3" fill="#bd8b16"/><path d="M311 8 Q323 8 331 0 L425 0 Q442 0 442 8 L442 48 Q442 56 425 56 L331 56 Q323 48 311 48Z" fill="#754a43" stroke="#3f2027" stroke-width="2"/><rect x="442" y="8" width="135" height="40" rx="12" fill="#c8a88d" stroke="#57272f" stroke-width="2"/><path d="M577 8 L590 8 L590 48 L577 48" fill="none" stroke="#bd8b16" stroke-width="3"/><path d="M44 72H577" stroke="#1d5673" stroke-dasharray="4 4"/><path d="M44 65V79M577 65V79" stroke="#1d5673"/></g><g fill="#57272f" font-family="DM Mono" font-size="11"><text x="70" y="250">TIP</text><text x="245" y="250">SCULPTED GRIP</text><text x="490" y="250">BARREL / CAP</text></g><g stroke="#bd8b16" fill="none"><path d="M85 220L85 190M270 220L270 193M530 220L530 190"/></g><text x="350" y="300" text-anchor="middle" fill="#82776f" font-family="DM Mono" font-size="10" letter-spacing="2">EARLY FORM STUDY · NOT TO SCALE</text></svg></div>
- </div>
-</section>
-
 <section class="section making" id="making">
  <div class="section-head reveal">
   <div><div class="section-index">03 / MAKING PROCESS</div><h2>Made by hand,<br>step by step.</h2></div>
@@ -185,13 +182,6 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
  </div>
 </section>
 
-<section class="section showcase" id="final">
- <div class="section-head reveal"><div><div class="section-index">04 / FINAL CONCEPT</div><h2>A tool for<br>curious minds.</h2></div><p class="section-intro">A personal object for people who move between creative expression and analytical thought.</p></div>
- <div class="final-grid">
-  <div class="final-photo reveal"><img src="assets/pen-prototype.jpg" alt="Close view of the burgundy and natural wood pen prototype"></div>
-  <div class="final-copy reveal"><div class="eyebrow">Kaya Yang · The Resonance Pen</div><p>The physical prototype explores an expressive, segmented silhouette with deep burgundy tones, warm natural material, and a small metallic transition. Rather than looking like a conventional technical instrument, it aims to feel like an object with personality — one that belongs beside a piano, a sketchbook, or a page of proofs.</p><p>The design is still a form study. The final refill, clip mechanism, and exact dimensions can be developed alongside user testing to make sure that the character of the object is matched by reliable everyday performance.</p><div class="pillars"><div class="pillar"><b>Expressive</b><small>A distinct visual rhythm inspired by music.</small></div><div class="pillar"><b>Structured</b><small>Balanced proportions informed by geometry.</small></div><div class="pillar"><b>Tactile</b><small>Material contrast that rewards touch.</small></div><div class="pillar"><b>Personal</b><small>A writing companion for ideas of every kind.</small></div></div></div>
- </div>
-</section>
 <section class="section">
  <div class="materials">
   <div class="reveal"><div class="section-index">05 / COLOR & MATERIAL DIRECTION</div><h2>A palette with<br>two sides.</h2><p class="section-intro" style="margin-top:20px">The mood combines the warmth of a well-used instrument with the precision of a carefully drawn diagram. Rich, grounded colors are balanced by a restrained metallic accent.</p>
@@ -201,7 +191,18 @@ footer{padding:25px 8vw;background:#171416;color:#aaa19a;display:flex;justify-co
   <div class="mood-image reveal"><img src="assets/moodboard.png" alt="Original color mood board with wine, gold, grey, blue, and deep green swatches"></div>
  </div>
 </section>
-<section class="closing" id="contact"><div class="eyebrow">A study in thoughtful making</div><h2>Every great idea<br>starts with a mark.</h2><p>Resonance is an exploration of the space where structure meets imagination — designed for the people who find both in the act of writing.</p><a class="btn primary" href="#top">Back to the beginning ↑</a></section>
+
+<section class="section inspiration-board" id="moodboard">
+ <div class="section-head reveal">
+  <div><div class="section-index">06 / VISUAL INSPIRATION</div><h2>A world of<br>quiet character.</h2></div>
+  <p class="section-intro">A visual collection of objects, textures, and atmospheres behind the Resonance Pen: antique instruments, books, chess pieces, sculpture, and the expressive details of music. The references share an elegant, dark, and handcrafted character.</p>
+ </div>
+ <figure class="inspiration-board-frame reveal">
+  <img src="assets/inspiration-board.png" alt="Visual inspiration mood board with antique clocks, books, chess pieces, classical sculpture, musical keys, ornate objects, and dark atmospheric still life">
+  <figcaption><span>VISUAL REFERENCE</span> — FORM · MATERIAL · MUSIC · ATMOSPHERE</figcaption>
+ </figure>
+</section>
+\n<section class="closing" id="contact"><div class="eyebrow">A study in thoughtful making</div><h2>Every great idea<br>starts with a mark.</h2><p>Resonance is an exploration of the space where structure meets imagination — designed for the people who find both in the act of writing.</p><a class="btn primary" href="#top">Back to the beginning ↑</a></section>
 </main>
 <footer><span>RESONANCE — INDUSTRIAL DESIGN PORTFOLIO</span><span>FORM · FUNCTION · EXPRESSION</span><span>© 2026</span></footer>
 <script>
